@@ -9,7 +9,7 @@ workbook = load_workbook('Book1.xlsx')
 #selecting Active sheet 
 sheet = workbook.active
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 driver.maximize_window()
 
 time.sleep(1)
@@ -34,4 +34,5 @@ for row in sheet.iter_rows(min_row=2,max_row=sheet.max_row,values_only=True) :
 
     time.sleep(1)
     
+
 driver.quit()
